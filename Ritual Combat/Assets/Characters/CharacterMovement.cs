@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour {
     public float maxSpeed = 5.0f;
     public float jumpForce = 15.0f;
     public int player;
+    public int facing;
     bool canJump;
     bool downPlatform;
     List<Collider2D> dropDown;
@@ -28,10 +29,12 @@ public class CharacterMovement : MonoBehaviour {
 
         if (transform.GetComponent<Rigidbody2D>().velocity.x > 0)
         {
+            facing = 1;
             transform.Rotate(new Vector3(0, 0, 0) - transform.eulerAngles);
         }
         else if (transform.GetComponent<Rigidbody2D>().velocity.x < 0)
         {
+            facing = -1;
             transform.Rotate(new Vector3(0, 180, 0) - transform.eulerAngles);
         }
 

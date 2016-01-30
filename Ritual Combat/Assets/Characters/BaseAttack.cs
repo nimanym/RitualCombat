@@ -3,9 +3,10 @@ using System.Collections;
 
 public class BaseAttack : MonoBehaviour {
 
-    public int damage = 1;
+    public int damage = 10;
     public GameObject weapon;
     public float attackSpeed = 2.0f;
+    public int favourOnHit = 10;
     public Vector3 weaponRestPosition = new Vector3(0.05f, 0);
     public Vector3 weaponRestRotation = new Vector3(0, 0, 18.0f);
     public Vector3 weaponSwingPosition = new Vector3(0.052f, 0);
@@ -24,7 +25,7 @@ public class BaseAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (Input.GetAxis("Fire2") > 0)
+        if (Input.GetAxis("BaseAttack" + GetComponentInParent<CharacterMovement>().player.ToString()) > 0)
         {
             attacking = true;
         }
@@ -47,9 +48,6 @@ public class BaseAttack : MonoBehaviour {
             swingOut = true;
         }
 
-        Debug.Log(weapon.transform.localPosition);
-        Debug.Log(weaponRestPosition);
-        //Debug.Log("swingIn=" + swingIn);
 
         if (swingIn)
         { 
@@ -61,6 +59,18 @@ public class BaseAttack : MonoBehaviour {
             weapon.transform.localPosition = Vector3.MoveTowards(weapon.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             weapon.transform.Rotate(Vector3.MoveTowards(weapon.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime)- weapon.transform.localRotation.eulerAngles);
             weapon.GetComponentInChildren<BoxCollider2D>(true).enabled = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (col.gameObject != gameObject)
+            {
+                GetComponentInParent<PlayerFavour>().addFavour(favourOnHit);
+                col.gameObject.GetComponent<PlayerHealth>().receiveDamage(damage);
+            }
         }
     }
 }

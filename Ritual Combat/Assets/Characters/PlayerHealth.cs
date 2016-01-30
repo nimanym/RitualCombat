@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void receiveDamage(int dmg)
+    public void receiveDamage(int dmg)
     {
         if (isAlive)
         {

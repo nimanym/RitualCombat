@@ -19,20 +19,20 @@ public class PlayerFavour : MonoBehaviour
     void FixedUpdate()
     {
         //Debug.Log(favour);
-        favour += Time.deltaTime;
+        favour += 100*Time.deltaTime;
         if (favour >= 100.0f)
         {
             favour = 100.0f;
             isFull = true;
         }
 
-        if (Input.GetAxis("Fire1") > 0) //BOTON B DEL MANDO
+        if (Input.GetAxis("Ulti" + GetComponentInParent<CharacterMovement>().player.ToString()) > 0) //BOTON B DEL MANDO
         {
             useUltimate();
         }
     }
 
-    void addFavour(int fav)
+    public void addFavour(int fav)
     {
         favour += fav;
     }
@@ -47,9 +47,10 @@ public class PlayerFavour : MonoBehaviour
 
     void useUltimate()
     {
-        Debug.Log(favour);
+        //Debug.Log(favour);
         if (isFull)
         {
+            gameObject.SendMessage("Ultimate");
             favour = 0;
             isFull = false;
             //Debug.Log("Usas tu ulti: "+favour);
