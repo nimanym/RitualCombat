@@ -2,8 +2,9 @@
 using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 350;
-    public int health;
+    public float maxHealth = 350.0f;
+    public float health;
+    public GameObject healthBar;
     bool isAlive;
     int player;
 
@@ -18,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            health = 0;
+            health = 0.0f;
             isAlive = false;
         }
 
@@ -28,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     void OnGUI()
     {
         string texto = "Player " + player.ToString();
-        string texto2 = "Health: " + health;
+        string texto2 = "Health: " + (int)health;
         switch (player)
         {
             case 1: GUI.Label(new Rect(10, 10, 100, 20), texto); GUI.Label(new Rect(10, 25, 100, 35), texto2); break;
@@ -44,6 +45,12 @@ public class PlayerHealth : MonoBehaviour
         {
             health -= dmg;
         }
+    }
+
+    void setHealthBar(int health) {
+        float healthPercentage = health * 100 / maxHealth;
+        Debug.Log("Vida: "+health+" Porcentaje: "+ healthPercentage);
+        healthBar.transform.localScale = new Vector3(healthPercentage, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
 
