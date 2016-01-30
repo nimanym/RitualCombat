@@ -1,0 +1,49 @@
+risk of rain pvp - deathmatch
+skill based -> apuntar
+varios personajes -> cada uno a su dios
+castear el ritual en mitad del combate para efectos extra
+cuando casteas el ritual se cambia el fondo de la pantalla al dios invocado
+OPCIONAL: personaje generico y desbloquear dioses
+ritual: instakill (esquivar o intentar cortarlo)
+
+Ataque basico, ataque especial, ulti
+
+personajes: un personaje y elige a que bando
+1. ritual a thor, que caiga un martillo del cielo y aplaste a todos
+	MELEE
+	Especial: Saca el escudo para bloquear un ataque, si bloqueas un ataque, stuneas. Tiene un CD (si aciertas se reduce). Cuando bloqueas tambien te da favor.
+	VELOCIDAD --, VIDA ++
+
+2. griego con lanza (pantheon sin escudo).
+	MELEE, menos attack speed, más rango
+	Especial: Lanza la lanza y tiene que recogerla como hacha de draven. Mientras tanto puede lanzar puñetazos pero menos daño y menos rango pero mas attack speed. Corre más.
+	ULTI: Ares. Llueven armas del cielo. Hace el mismo daño que si la lanza. Se ve caer para que se pueda esquivar. Las puedes coger como tu habilidad especial para lanzarlas. Duran x tiempo pero si tienes una lanza no se pierde hasta que la lanzas.
+	VELOCIDAD ++, VIDA ==
+
+3. cultista de cthulhu.
+	Ataque basico magia: proyectiles magicos (no mucho daño pero bastante rango) No muy spameable.
+	Especial: Saca una daga de sacrificio (rango muy corto). Si te acierta se le llena la barra de golpe.
+	ULTI: cthulhu. invoca tentaculos hentai y violan a las lolis.
+	VELOCIDAD ==, VIDA --
+
+	3. poseidon -> ola gigante que stunea (ulti de nami)
+	4. ares -> unlimited blade works
+	5. china -> dragon que lance llamarada
+	6. loki -> invoca copias del jugador rollo lb o shaco
+
+una barra DE FAVOR, cuando se llena puedes usar tu ulti (se llena rapido)
+barra de casteo: se llena si hacer combinaciones de teclas y se vacia si te pegan, pero se llena tambien por tiempo
+
+
+OPCIONAL: combinacion de teclas
+objetos que van spawneando y te llenan la barra
+
+menu ppal
+pantalla de seleccion de personaje (A)
+gana el dios, no el jugador
+
+RITUAL COMBAT?
+
+
+DETALLES A MODIFICAR:
+Vibracion al rebotar con la pared.
