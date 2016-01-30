@@ -52,7 +52,6 @@ public class CrossScreen : MonoBehaviour {
             }
             else
             {
-                Debug.Log("entra");
                 transform.Translate(new Vector3(speed, 0));
                 if (Camera.main.WorldToScreenPoint(transform.GetComponent<BoxCollider2D>().bounds.min).x < 0)
                 {
