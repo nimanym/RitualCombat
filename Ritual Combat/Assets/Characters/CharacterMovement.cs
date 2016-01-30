@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterMovement : MonoBehaviour {
 
@@ -8,12 +9,14 @@ public class CharacterMovement : MonoBehaviour {
     public int player;
     bool canJump;
     bool downPlatform;
+    List<Collider2D> dropDown;
 
 	// Use this for initialization
 	void Start () {
         canJump = false;
         downPlatform = false;
-	}
+        dropDown = new List<Collider2D>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate() {
@@ -23,7 +26,16 @@ public class CharacterMovement : MonoBehaviour {
         //Movimiento Lateral
         transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal" + player.ToString())*maxSpeed, 0.0f), ForceMode2D.Impulse);
 
-        if (transform.GetComponent<Rigidbody2D>().velocity.x > maxSpeed)
+        if (transform.GetComponent<Rigidbody2D>().velocity.x > 0)
+        {
+            transform.Rotate(new Vector3(0, 0, 0) - transform.eulerAngles);
+        }
+        else if (transform.GetComponent<Rigidbody2D>().velocity.x < 0)
+        {
+            transform.Rotate(new Vector3(0, 180, 0) - transform.eulerAngles);
+        }
+
+            if (transform.GetComponent<Rigidbody2D>().velocity.x > maxSpeed)
         {
             transform.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed, transform.GetComponent<Rigidbody2D>().velocity.y);
         }
@@ -58,7 +70,14 @@ public class CharacterMovement : MonoBehaviour {
         {
             downPlatform = true;
         }
-        else downPlatform = false;
+        else {
+            downPlatform = false;
+            for (int i = dropDown.Count-1; i >= 0 ; i--)
+            {
+                Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), dropDown[i], false);
+                dropDown.Remove(dropDown[i]);
+            }
+        }
 
     }
 
@@ -72,6 +91,10 @@ public class CharacterMovement : MonoBehaviour {
         if (col.gameObject.GetComponent<PlatformEffector2D>() && downPlatform)
         {
             Physics2D.IgnoreCollision(gameObject.GetComponent<BoxCollider2D>(), col.collider);
+            if (!dropDown.Contains(col.collider))
+            {
+                dropDown.Add(col.collider);
+            }
         }
     }
 
