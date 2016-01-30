@@ -19,10 +19,12 @@ public class VikingUltimate : MonoBehaviour {
     {
         GameObject mjollnir = Instantiate(hammer);
         mjollnir.transform.position = new Vector3(transform.position.x+GetComponent<CharacterMovement>().facing*2, mjollnir.transform.position.y);
-        if(GetComponent<CharacterMovement>().facing == -1)
+        mjollnir.transform.Rotate(new Vector3(0, 0, 270));
+        /*if(GetComponent<CharacterMovement>().facing == -1)
         {
             mjollnir.transform.Rotate(new Vector3(0, 0, 180));
-        }
+        }*/
+        mjollnir.GetComponent<hurtPlayers>().knockback = true;
         mjollnir.GetComponent<hurtPlayers>().setException(gameObject);
     }
 }

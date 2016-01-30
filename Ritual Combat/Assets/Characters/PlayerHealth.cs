@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     bool isAlive;
     int player;
+    float damagedTimer = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -14,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         isAlive = true;
         player = GetComponentInParent<CharacterMovement>().player;
     }       // Update is called once per frame	
-    void Update()
+    void FixedUpdate()
     {
         if (health <= 0)
         {
@@ -22,6 +23,11 @@ public class PlayerHealth : MonoBehaviour
             isAlive = false;
         }
 
+        if (damagedTimer > 0.0f)
+        {
+            damagedTimer -= Time.deltaTime;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, 2*damagedTimer);
+        }
     }
 
     //Muestra la vida actual de los personajes en pantalla
@@ -40,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void receiveDamage(int dmg)
     {
+        damagedTimer = 0.5f;
         if (isAlive)
         {
             health -= dmg;
