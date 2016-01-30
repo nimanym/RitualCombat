@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        facing = 1;
         canJump = false;
         downPlatform = false;
         dropDown = new List<Collider2D>();

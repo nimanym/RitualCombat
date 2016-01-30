@@ -19,7 +19,7 @@ public class PlayerFavour : MonoBehaviour
     void FixedUpdate()
     {
         //Debug.Log(favour);
-        favour += 100*Time.deltaTime;
+        favour += 10*Time.deltaTime;
         if (favour >= 100.0f)
         {
             favour = 100.0f;
@@ -32,17 +32,9 @@ public class PlayerFavour : MonoBehaviour
         }
     }
 
-    public void addFavour(int fav)
+    public void addFavour(float fav)
     {
         favour += fav;
-    }
-
-    void addFavour()
-    {
-        if (Input.GetAxis("Fire2") > 0)
-        {
-            favour += 10;
-        }
     }
 
     void useUltimate()
