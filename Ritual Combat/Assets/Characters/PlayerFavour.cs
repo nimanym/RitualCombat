@@ -38,10 +38,10 @@ public class PlayerFavour : MonoBehaviour
     {
         string texto = "Favour: " + (int)favour;
         switch (player) {
-            case 1: GUI.Label(new Rect(10, 30, 100, 40), texto); break;
-            case 2: GUI.Label(new Rect(110, 30, 190, 40), texto); break;
-            case 3: GUI.Label(new Rect(200, 30, 290, 40), texto); break;
-            case 4: GUI.Label(new Rect(300, 30, 390, 40), texto); break;
+            case 1: GUI.Label(new Rect(10, 40, 100, 50), texto); break;
+            case 2: GUI.Label(new Rect(160, 40, 250, 50), texto); break;
+            case 3: GUI.Label(new Rect(310, 40, 400, 50), texto); break;
+            case 4: GUI.Label(new Rect(460, 40, 550, 50), texto); break;
         }
     }
 

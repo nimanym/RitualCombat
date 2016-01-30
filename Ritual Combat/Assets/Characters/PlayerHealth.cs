@@ -27,13 +27,14 @@ public class PlayerHealth : MonoBehaviour
     //Muestra la vida actual de los personajes en pantalla
     void OnGUI()
     {
-        string texto = "Player " + player.ToString() + ": " + health;
+        string texto = "Player " + player.ToString();
+        string texto2 = "Health: " + health;
         switch (player)
         {
-            case 1: GUI.Label(new Rect(10, 10, 100, 20), texto); break;
-            case 2: GUI.Label(new Rect(110, 10, 190, 20), texto); break;
-            case 3: GUI.Label(new Rect(200, 10, 290, 20), texto); break;
-            case 4: GUI.Label(new Rect(300, 10, 390, 20), texto); break;
+            case 1: GUI.Label(new Rect(10, 10, 100, 20), texto); GUI.Label(new Rect(10, 25, 100, 35), texto2); break;
+            case 2: GUI.Label(new Rect(160, 10, 250, 20), texto); GUI.Label(new Rect(160, 25, 250, 35), texto2); break;
+            case 3: GUI.Label(new Rect(310, 10, 400, 20), texto); GUI.Label(new Rect(310, 25, 400, 35), texto2); break;
+            case 4: GUI.Label(new Rect(460, 10, 550, 20), texto); GUI.Label(new Rect(460, 25, 550, 35), texto2); break;
         }
     }
 
