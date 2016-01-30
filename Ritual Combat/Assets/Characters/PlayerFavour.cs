@@ -6,6 +6,7 @@ public class PlayerFavour : MonoBehaviour
     public float maxFavour = 100.0f;
     float favour;
     public bool isFull;
+    public int player;
 
 
     // Use this for initialization
@@ -29,6 +30,19 @@ public class PlayerFavour : MonoBehaviour
         if (Input.GetAxis("Ulti" + GetComponentInParent<CharacterMovement>().player.ToString()) > 0) //BOTON B DEL MANDO
         {
             useUltimate();
+        }
+    }
+
+    void OnGUI()
+    {
+        string texto = "Favour: " + favour;
+        if (player == 1)
+        {
+            GUI.Label(new Rect(10, 40, 100, 50), texto);
+        }
+        else if (player == 2)
+        {
+            GUI.Label(new Rect(Screen.width - 100, 40, Screen.width - 10, 50), texto);
         }
     }
 

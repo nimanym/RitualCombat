@@ -1,3 +1,5 @@
+RITUAL COMBAT
+
 risk of rain pvp - deathmatch
 skill based -> apuntar
 varios personajes -> cada uno a su dios
@@ -9,25 +11,25 @@ ritual: instakill (esquivar o intentar cortarlo)
 Ataque basico, ataque especial, ulti
 
 personajes: un personaje y elige a que bando
-1. ritual a thor, que caiga un martillo del cielo y aplaste a todos
-	MELEE
-	Especial: Saca el escudo para bloquear un ataque, si bloqueas un ataque, stuneas. Tiene un CD (si aciertas se reduce). Cuando bloqueas tambien te da favor.
+1. Vikingo con hacha
+	BASICO: melee, más attack speed, menos rango.
+	ESPECIAL: Saca el escudo para bloquear un ataque, si bloqueas un ataque, stuneas. Tiene un CD (si aciertas se reduce). Cuando bloqueas tambien te da favor.
+	ULTI: ritual a thor, que caiga un martillo del cielo y aplaste a todos
 	VELOCIDAD --, VIDA ++
 
-2. griego con lanza (pantheon sin escudo).
-	MELEE, menos attack speed, más rango
-	Especial: Lanza la lanza y tiene que recogerla como hacha de draven. Mientras tanto puede lanzar puñetazos pero menos daño y menos rango pero mas attack speed. Corre más.
+2. Griego con lanza (pantheon sin escudo).
+	BASICO: melee, menos attack speed, más rango
+	ESPECIAL: Lanza la lanza y tiene que recogerla como hacha de draven. Mientras tanto puede lanzar puñetazos pero menos daño y menos rango pero mas attack speed. Corre más.
 	ULTI: Ares. Llueven armas del cielo. Hace el mismo daño que si la lanza. Se ve caer para que se pueda esquivar. Las puedes coger como tu habilidad especial para lanzarlas. Duran x tiempo pero si tienes una lanza no se pierde hasta que la lanzas.
 	VELOCIDAD ++, VIDA ==
 
-3. cultista de cthulhu.
-	Ataque basico magia: proyectiles magicos (no mucho daño pero bastante rango) No muy spameable.
-	Especial: Saca una daga de sacrificio (rango muy corto). Si te acierta se le llena la barra de golpe.
-	ULTI: cthulhu. invoca tentaculos hentai y violan a las lolis.
+3. Cultista de cthulhu.
+	BASICO: proyectiles magicos (no mucho daño pero bastante rango) No muy spameable.
+	ESPECIAL: Saca una daga de sacrificio (rango muy corto). Si te acierta se le llena la barra de golpe.
+	ULTI: cthulhu. invoca tentaculos hentai y violan a las lolis. Hacia adelante o a ambos lados?
 	VELOCIDAD ==, VIDA --
 
-	3. poseidon -> ola gigante que stunea (ulti de nami)
-	4. ares -> unlimited blade works
+	4. poseidon -> ola gigante que stunea (ulti de nami)
 	5. china -> dragon que lance llamarada
 	6. loki -> invoca copias del jugador rollo lb o shaco
 
@@ -38,12 +40,13 @@ barra de casteo: se llena si hacer combinaciones de teclas y se vacia si te pega
 OPCIONAL: combinacion de teclas
 objetos que van spawneando y te llenan la barra
 
-menu ppal
-pantalla de seleccion de personaje (A)
+MENU PRINCIPAL
+PANTALLA DE SELECCION DE PERSONAJE
 gana el dios, no el jugador
 
-RITUAL COMBAT?
+
 
 
 DETALLES A MODIFICAR:
 Vibracion al rebotar con la pared.
+Bajar un poco la plataforma te permite volver a subir.
