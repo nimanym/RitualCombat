@@ -36,14 +36,12 @@ public class PlayerFavour : MonoBehaviour
 
     void OnGUI()
     {
-        string texto = "Favour: " + favour;
-        if (player == 1)
-        {
-            GUI.Label(new Rect(10, 40, 100, 50), texto);
-        }
-        else if (player == 2)
-        {
-            GUI.Label(new Rect(Screen.width - 100, 40, Screen.width - 10, 50), texto);
+        string texto = "Favour: " + (int)favour;
+        switch (player) {
+            case 1: GUI.Label(new Rect(10, 30, 100, 40), texto); break;
+            case 2: GUI.Label(new Rect(110, 30, 190, 40), texto); break;
+            case 3: GUI.Label(new Rect(200, 30, 290, 40), texto); break;
+            case 4: GUI.Label(new Rect(300, 30, 390, 40), texto); break;
         }
     }
 
