@@ -23,6 +23,18 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate() {
 
+        if (gameObject.GetComponent<SpartanSpecial>())
+        {
+            if (gameObject.GetComponent<SpartanSpecial>().hasSpear)
+            {
+                maxSpeed = 4.5f;
+            }
+            else
+            {
+                maxSpeed = 7.0f;
+            }
+        }
+
         //Movimiento Lateral
         if (Mathf.Abs(transform.GetComponent<Rigidbody2D>().velocity.x) < maxSpeed)
         { 

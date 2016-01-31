@@ -54,11 +54,15 @@ public class BaseAttack : MonoBehaviour {
             weapon.transform.localPosition = Vector3.MoveTowards(weapon.transform.localPosition, weaponSwingPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             weapon.transform.Rotate(Vector3.MoveTowards(weapon.transform.localRotation.eulerAngles, weaponSwingRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime)- weapon.transform.localRotation.eulerAngles);
             weapon.GetComponentInChildren<BoxCollider2D>(true).enabled = true;
+            if (weapon.GetComponentInChildren<PolygonCollider2D>(true))
+                weapon.GetComponentInChildren<PolygonCollider2D>(true).enabled = true;
         }
         else if (swingOut){
             weapon.transform.localPosition = Vector3.MoveTowards(weapon.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             weapon.transform.Rotate(Vector3.MoveTowards(weapon.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime)- weapon.transform.localRotation.eulerAngles);
             weapon.GetComponentInChildren<BoxCollider2D>(true).enabled = false;
+            if (weapon.GetComponentInChildren<PolygonCollider2D>(true))
+                weapon.GetComponentInChildren<PolygonCollider2D>(true).enabled = false;
         }
     }
 

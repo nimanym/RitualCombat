@@ -30,7 +30,7 @@ public class PlayerFavour : MonoBehaviour
         }
 
         //Debug.Log(favour);
-        addFavour(10*Time.deltaTime); //Debug: La regeneración de favor está chetada
+        addFavour(Time.deltaTime); //Debug: La regeneración de favor está chetada
 
         
 
