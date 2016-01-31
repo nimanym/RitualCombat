@@ -3,9 +3,10 @@ using System.Collections;
 
 public class VikingSpecial : MonoBehaviour {
 
-    public int damage = 20;
     public GameObject shield;
     public float attackSpeed = 0.5f;
+    public float raisedTime = 0.5f;
+    float raisedCounter;
     public int favourOnHit = 20;
     public Vector3 weaponRestPosition = new Vector3(0.05f, 0);
     public Vector3 weaponRestRotation = new Vector3(0, 0, 18.0f);
@@ -15,6 +16,7 @@ public class VikingSpecial : MonoBehaviour {
     Vector3 RotationDiff;
     bool attacking;
     bool swingIn;
+    bool shieldRaised;
     bool swingOut;
 
     // Use this for initialization
@@ -38,14 +40,26 @@ public class VikingSpecial : MonoBehaviour {
         if (attacking && shield.transform.localPosition == weaponRestPosition && shield.transform.localRotation.eulerAngles == weaponRestRotation)
         {
             swingOut = false;
+            shieldRaised = true;
+            raisedCounter = raisedTime;
             swingIn = true;
+        }
+        else if (shieldRaised && shield.transform.localPosition == weaponSwingPosition && shield.transform.localRotation.eulerAngles == weaponSwingRotation)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+            if (raisedCounter <= 0.0f)
+            {
+                shieldRaised = false;
+            }
+            raisedCounter -= Time.deltaTime;
         }
         else if (swingIn && shield.transform.localPosition == weaponSwingPosition && shield.transform.localRotation.eulerAngles == weaponSwingRotation)
         {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             swingIn = false;
             swingOut = true;
         }
-        else if (!swingIn)
+        else if (!swingIn && !shieldRaised)
         {
             swingOut = true;
         }
@@ -55,26 +69,11 @@ public class VikingSpecial : MonoBehaviour {
         {
             shield.transform.localPosition = Vector3.MoveTowards(shield.transform.localPosition, weaponSwingPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             shield.transform.Rotate(Vector3.MoveTowards(shield.transform.localRotation.eulerAngles, weaponSwingRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - shield.transform.localRotation.eulerAngles);
-            shield.GetComponentInChildren<BoxCollider2D>(true).enabled = true;
         }
         else if (swingOut)
         {
             shield.transform.localPosition = Vector3.MoveTowards(shield.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             shield.transform.Rotate(Vector3.MoveTowards(shield.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - shield.transform.localRotation.eulerAngles);
-            shield.GetComponentInChildren<BoxCollider2D>(true).enabled = false;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            if (col.gameObject != gameObject)
-            {
-                GetComponentInParent<PlayerFavour>().addFavour(favourOnHit);
-                col.gameObject.GetComponent<PlayerHealth>().receiveDamage(damage);
-                col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(damage * GetComponentInParent<CharacterMovement>().facing, 0), ForceMode2D.Impulse);
-            }
         }
     }
 }
