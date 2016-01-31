@@ -22,29 +22,32 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate() {
-        
-        //Movimiento Lateral
-        transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal" + player.ToString())*maxSpeed, 0.0f), ForceMode2D.Impulse);
 
-        if (transform.GetComponent<Rigidbody2D>().velocity.x > 0)
+        //Movimiento Lateral
+        if (Mathf.Abs(transform.GetComponent<Rigidbody2D>().velocity.x) < maxSpeed)
+        { 
+            transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal" + player.ToString())*1.0f, 0.0f), ForceMode2D.Impulse);
+        }
+
+        if (transform.GetComponent<Rigidbody2D>().velocity.x > 0.1f)
         {
             facing = 1;
             transform.Rotate(new Vector3(0, 0, 0) - transform.eulerAngles);
         }
-        else if (transform.GetComponent<Rigidbody2D>().velocity.x < 0)
+        else if (transform.GetComponent<Rigidbody2D>().velocity.x < -0.1f)
         {
             facing = -1;
             transform.Rotate(new Vector3(0, 180, 0) - transform.eulerAngles);
         }
-
-            if (transform.GetComponent<Rigidbody2D>().velocity.x > maxSpeed)
+        
+        if (transform.GetComponent<Rigidbody2D>().velocity.x > maxSpeed*3)
         {
-            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed, transform.GetComponent<Rigidbody2D>().velocity.y);
+            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(maxSpeed*3, transform.GetComponent<Rigidbody2D>().velocity.y);
         }
 
-        if (transform.GetComponent<Rigidbody2D>().velocity.x < -maxSpeed)
+        if (transform.GetComponent<Rigidbody2D>().velocity.x < -maxSpeed*3)
         {
-            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-maxSpeed, transform.GetComponent<Rigidbody2D>().velocity.y);
+            transform.GetComponent<Rigidbody2D>().velocity = new Vector2(-maxSpeed*3, transform.GetComponent<Rigidbody2D>().velocity.y);
         }
 
 

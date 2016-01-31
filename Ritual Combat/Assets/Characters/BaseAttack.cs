@@ -70,7 +70,7 @@ public class BaseAttack : MonoBehaviour {
             {
                 GetComponentInParent<PlayerFavour>().addFavour(favourOnHit);
                 col.gameObject.GetComponent<PlayerHealth>().receiveDamage(damage);
-                col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(damage* GetComponentInParent<CharacterMovement>().facing, 0), ForceMode2D.Impulse);
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2((damage/2.0f) * GetComponentInParent<CharacterMovement>().facing, 0), ForceMode2D.Impulse);
             }
         }
     }
