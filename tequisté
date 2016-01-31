@@ -6,26 +6,36 @@ Vibracion al rebotar con la pared.
 Bajar un poco la plataforma te permite volver a subir.
 
 FALTA:
-2 Implementar que los personajes mueran 
-2.5 Implementar un ganador
+	
 3 Menú principal
 4 Pantalla de seleccion
 5 Sonidos
-	Barra de favor
--1 Personaje Espartano
--1 Casteo de Ritual + Combinaciones de Teclas
-1 Ajustar la distancia a la que sale el martillo
-	Implementacion del bloqueo
+2 Personaje Espartano
+6 Casteo de Ritual + Combinaciones de Teclas
+	
 Pulir Knockbacks
 Añadir Efectos Especiales
 Poner texto a la barra de HP
 Implementar objetos que spawnean y recargan favor
 
+HECHO:
+	Implementar que los personajes mueran
+	Knockback tentaculo
+	Implementar un ganador
+	Implementacion del bloqueo
+	Barra de favor
+	Ajustar la distancia a la que sale el martillo
+
+	MENU DE QUIT IN GAME
+	MAP2 - 2 jugadores
+	MAP3 - 3 jugadores
+	MAP4 - 4 jugadores
+
 NECESITAMOS:
-- Plataformas
-- Fondo de pantalla in game
-- Fondo de pantalla menu
-- Fondo de pantalla seleccion
+- Plataformas (Alexis)
+- Fondo de pantalla in game (David)
+- Fondo de pantalla menu ^^
+- Fondo de pantalla seleccion ^^
 - Logotipo del videojuego
 
 Ataque basico, ataque especial, ulti
@@ -52,3 +62,9 @@ personajes: un personaje y elige a que bando
 	4. poseidon -> ola gigante que stunea (ulti de nami)
 	5. china -> dragon que lance llamarada
 	6. loki -> invoca copias del jugador rollo lb o shaco
+
+	Grabar gameplay de hasta 3 minutos para la presentación
+
+	Mapa3
+	La barra de  favor de la cultista no sube
+	Espartano y Vikingo no tienen brazos
