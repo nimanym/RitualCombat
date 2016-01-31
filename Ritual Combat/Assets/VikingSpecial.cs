@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CultistSpecial : MonoBehaviour {
+public class VikingSpecial : MonoBehaviour {
 
     public int damage = 20;
-    public GameObject weapon;
+    public GameObject shield;
     public float attackSpeed = 0.5f;
-    public int favourOnHit = 50;
+    public int favourOnHit = 20;
     public Vector3 weaponRestPosition = new Vector3(0.05f, 0);
     public Vector3 weaponRestRotation = new Vector3(0, 0, 18.0f);
     public Vector3 weaponSwingPosition = new Vector3(0.052f, 0);
@@ -35,12 +35,12 @@ public class CultistSpecial : MonoBehaviour {
             attacking = false;
         }
 
-        if (attacking && weapon.transform.localPosition == weaponRestPosition && weapon.transform.localRotation.eulerAngles == weaponRestRotation)
+        if (attacking && shield.transform.localPosition == weaponRestPosition && shield.transform.localRotation.eulerAngles == weaponRestRotation)
         {
             swingOut = false;
             swingIn = true;
         }
-        else if (swingIn && weapon.transform.localPosition == weaponSwingPosition && weapon.transform.localRotation.eulerAngles == weaponSwingRotation)
+        else if (swingIn && shield.transform.localPosition == weaponSwingPosition && shield.transform.localRotation.eulerAngles == weaponSwingRotation)
         {
             swingIn = false;
             swingOut = true;
@@ -53,15 +53,15 @@ public class CultistSpecial : MonoBehaviour {
 
         if (swingIn)
         {
-            weapon.transform.localPosition = Vector3.MoveTowards(weapon.transform.localPosition, weaponSwingPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
-            weapon.transform.Rotate(Vector3.MoveTowards(weapon.transform.localRotation.eulerAngles, weaponSwingRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - weapon.transform.localRotation.eulerAngles);
-            weapon.GetComponentInChildren<BoxCollider2D>(true).enabled = true;
+            shield.transform.localPosition = Vector3.MoveTowards(shield.transform.localPosition, weaponSwingPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
+            shield.transform.Rotate(Vector3.MoveTowards(shield.transform.localRotation.eulerAngles, weaponSwingRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - shield.transform.localRotation.eulerAngles);
+            shield.GetComponentInChildren<BoxCollider2D>(true).enabled = true;
         }
         else if (swingOut)
         {
-            weapon.transform.localPosition = Vector3.MoveTowards(weapon.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
-            weapon.transform.Rotate(Vector3.MoveTowards(weapon.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - weapon.transform.localRotation.eulerAngles);
-            weapon.GetComponentInChildren<BoxCollider2D>(true).enabled = false;
+            shield.transform.localPosition = Vector3.MoveTowards(shield.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
+            shield.transform.Rotate(Vector3.MoveTowards(shield.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - shield.transform.localRotation.eulerAngles);
+            shield.GetComponentInChildren<BoxCollider2D>(true).enabled = false;
         }
     }
 
