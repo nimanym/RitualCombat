@@ -33,7 +33,8 @@ public class VikingSpecial : MonoBehaviour {
         {
             attacking = true;
         }
-        else {
+        else
+        {
             attacking = false;
         }
 
@@ -46,10 +47,15 @@ public class VikingSpecial : MonoBehaviour {
         }
         else if (shieldRaised && shield.transform.localPosition == weaponSwingPosition && shield.transform.localRotation.eulerAngles == weaponSwingRotation)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
             if (raisedCounter <= 0.0f)
             {
                 shieldRaised = false;
+                gameObject.SendMessage("setBlocking", false);
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+                gameObject.SendMessage("setBlocking", true);
             }
             raisedCounter -= Time.deltaTime;
         }
@@ -75,5 +81,11 @@ public class VikingSpecial : MonoBehaviour {
             shield.transform.localPosition = Vector3.MoveTowards(shield.transform.localPosition, weaponRestPosition, PositionDiff.magnitude * attackSpeed * Time.deltaTime);
             shield.transform.Rotate(Vector3.MoveTowards(shield.transform.localRotation.eulerAngles, weaponRestRotation, RotationDiff.magnitude * attackSpeed * Time.deltaTime) - shield.transform.localRotation.eulerAngles);
         }
+    }
+
+    public void finishBlocking()
+    {
+        raisedCounter = 0;
+        shieldRaised = false;
     }
 }

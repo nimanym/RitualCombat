@@ -7,7 +7,7 @@ public class PlayerFavour : MonoBehaviour
     float favour;
     public bool isFull;
     int player;
-
+    float bigGainTimer = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -32,6 +32,12 @@ public class PlayerFavour : MonoBehaviour
         {
             useUltimate();
         }
+
+        if (bigGainTimer > 0.0f)
+        {
+            bigGainTimer -= Time.deltaTime;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.blue, 2*bigGainTimer);
+        }
     }
 
     void OnGUI()
@@ -47,6 +53,10 @@ public class PlayerFavour : MonoBehaviour
 
     public void addFavour(float fav)
     {
+        if (fav >= 20)
+        {
+            bigGainTimer = 0.5f;
+        }
         favour += fav;
     }
 

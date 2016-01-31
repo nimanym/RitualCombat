@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public GameObject healthBar;
     bool isAlive;
+    bool isBlocking;
     int player;
     float damagedTimer = 0.0f;
     Vector3 healthBarSize;
@@ -56,16 +57,30 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void setBlocking(bool blocking)
+    {
+        isBlocking = blocking;
+    }
+
     public void receiveDamage(int dmg)
     {
-        damagedTimer = 0.5f;
-        if (isAlive)
+        if (!isBlocking || dmg >= 40)
         {
-            health -= dmg;
-        }
+            damagedTimer = 0.5f;
+            if (isAlive)
+            {
+                health -= dmg;
+            }
 
-        float calcHealth = health / maxHealth;
-        setHealthBar(calcHealth);
+            float calcHealth = health / maxHealth;
+            setHealthBar(calcHealth);
+        }
+        else
+        {
+            gameObject.GetComponent<PlayerFavour>().addFavour(20);
+            setBlocking(false);
+            gameObject.SendMessage("finishBlocking");
+        }
     }
 
     public void setHealthBar(float myHealth) {
