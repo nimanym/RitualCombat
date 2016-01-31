@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     bool isAlive;
     int player;
     float damagedTimer = 0.0f;
+    Vector3 healthBarSize;
 
     // Use this for initialization
     void Start()
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
         isAlive = true;
         player = GetComponentInParent<CharacterMovement>().player;
+        healthBarSize = healthBar.transform.parent.GetComponent<RectTransform>().localScale;
     }       // Update is called once per frame	
     void FixedUpdate()
     {
@@ -28,6 +30,15 @@ public class PlayerHealth : MonoBehaviour
         {
             damagedTimer -= Time.deltaTime;
             gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, 2*damagedTimer);
+        }
+
+        if (gameObject.transform.rotation.eulerAngles.y > 0)
+        {
+            healthBar.transform.parent.GetComponent<RectTransform>().localScale = new Vector3(-healthBarSize.x, healthBarSize.y, healthBarSize.z);
+        }
+        else
+        {
+            healthBar.transform.parent.GetComponent<RectTransform>().localScale = healthBarSize;
         }
     }
 
@@ -52,12 +63,17 @@ public class PlayerHealth : MonoBehaviour
         {
             health -= dmg;
         }
+
+        float calcHealth = health / maxHealth;
+        setHealthBar(calcHealth);
     }
 
-    void setHealthBar(int health) {
-        float healthPercentage = health * 100 / maxHealth;
-        Debug.Log("Vida: "+health+" Porcentaje: "+ healthPercentage);
-        healthBar.transform.localScale = new Vector3(healthPercentage, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+    public void setHealthBar(float myHealth) {
+        //float healthPercentage = health * 100 / maxHealth;
+        //Debug.Log("Vida: "+health+" Porcentaje: "+ healthPercentage);
+        if (myHealth <= 0) myHealth = 0;
+        healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        
     }
 
 
