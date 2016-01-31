@@ -38,7 +38,7 @@ public class hurtPlayers : MonoBehaviour {
 
                 if (knockback)
                 {
-                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(damage *(col.gameObject.transform.position.x-transform.position.x), 0), ForceMode2D.Impulse);
+                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2((damage / 3.0f) *Mathf.Sign(col.gameObject.transform.position.x-transform.position.x), 0), ForceMode2D.Impulse);
                 }
 
                 if (autoDestruct)
@@ -67,7 +67,7 @@ public class hurtPlayers : MonoBehaviour {
 
                 if (knockback)
                 {
-                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(damage * Mathf.Sign(col.gameObject.transform.position.x - transform.position.x), 0), ForceMode2D.Impulse);
+                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2((damage / 3.0f) * Mathf.Sign(col.gameObject.transform.position.x - transform.position.x), 0), ForceMode2D.Impulse);
                 }
 
                 if (autoDestruct)

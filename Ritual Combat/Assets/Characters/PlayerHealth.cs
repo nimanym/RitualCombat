@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health = 0.0f;
             isAlive = false;
+            die();
         }
 
         //El personaje se vuelve rojo cuando recibe daño

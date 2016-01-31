@@ -7,15 +7,23 @@ public class checkForVictory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        players = GameObject.FindGameObjectsWithTag("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        //for (int i = 0; i < players.Length; i++)
-        //{
-        //    players[i].GetComponent<PlayerHealth>().checkDead();
-        //}
-	}
+    }
+
+    void OnGUI()
+    {
+        GUIStyle style = new GUIStyle();
+
+        players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length <= 1)
+        {
+            string texto = "Player " + players[0].GetComponent<CharacterMovement>().player.ToString() + " Wins";
+            style.fontSize = 40;
+            GUI.Label(new Rect((Screen.width/2)-100, (Screen.height / 2)-20, 100, 20), texto, style);
+        }
+    }
 }

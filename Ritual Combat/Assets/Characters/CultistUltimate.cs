@@ -29,6 +29,8 @@ public class CultistUltimate : MonoBehaviour {
             cthulhu.transform.Rotate(new Vector3(0, 180, 0));
             cthulhu.transform.position = new Vector3(21, transform.position.y, 1);
         }
+
+        cthulhu.GetComponent<hurtPlayers>().knockback = true;
         cthulhu.GetComponent<hurtPlayers>().setException(gameObject);
     }
 }
