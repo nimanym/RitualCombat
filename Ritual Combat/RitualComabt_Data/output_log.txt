@@ -1,0 +1,57 @@
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 530 (ID=0x191b)
+    Vendor:   Intel
+    VRAM:     2111 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.044 seconds
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Melanie\Documents\Gamejam Enero 2016\Ritual Combat\RitualComabt_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 El sistema no puede encontrar el archivo especificado.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 2 El sistema no puede encontrar el archivo especificado.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 2 El sistema no puede encontrar el archivo especificado.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 2 El sistema no puede encontrar el archivo especificado.
+
+ 
+(Filename:  Line: 54)
+
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.511210 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.279611 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 521.
+Total: 0.244543 ms (FindLiveObjects: 0.025283 ms CreateObjectMapping: 0.014222 ms MarkObjects: 0.195950 ms  DeleteObjects: 0.008691 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2c34 -> priority: 1 
+  Thread -> id: 2dd0 -> priority: 1 
