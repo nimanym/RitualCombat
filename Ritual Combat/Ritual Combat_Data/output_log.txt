@@ -14,26 +14,105 @@ Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Com
 Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.108 seconds
+- Completed reload, in  0.041 seconds
 Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.303913 ms
-Joystick disconnected ("Controller (XBOX 360 For Windows)").
+UnloadTime: 0.619241 ms
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.545652 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 520.
+Total: 0.364360 ms (FindLiveObjects: 0.041909 ms CreateObjectMapping: 0.022665 ms MarkObjects: 0.285672 ms  DeleteObjects: 0.013684 ms)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
  
-(Filename:  Line: 1260)
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at hurtPlayers.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at hurtPlayers.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.367205 ms
+
+Unloading 111 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.894221 ms (FindLiveObjects: 0.048752 ms CreateObjectMapping: 0.051745 ms MarkObjects: 0.703061 ms  DeleteObjects: 0.089379 ms)
 
 Joystick disconnected ("Controller (XBOX 360 For Windows)").
  
 (Filename:  Line: 1260)
 
-Joystick reconnected ("Controller (XBOX 360 For Windows)").
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     2103 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.041 seconds
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Nima\Documents\RitualCombat\Ritual Combat\Ritual Combat_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.607694 ms
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.156488 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 520.
+Total: 0.350675 ms (FindLiveObjects: 0.040199 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.275835 ms  DeleteObjects: 0.012829 ms)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
  
-(Filename:  Line: 1325)
+(Filename:  Line: 117)
 
 Joystick reconnected ("Controller (XBOX 360 For Windows)").
  
@@ -43,18 +122,115 @@ Joystick connected ("Controller (XBOX 360 For Windows)").
  
 (Filename:  Line: 1353)
 
-Joystick disconnected ("Controller (XBOX 360 For Windows)").
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
  
-(Filename:  Line: 1260)
+(Filename:  Line: 117)
 
-Joystick disconnected ("Controller (XBOX 360 For Windows)").
+NullReferenceException: Object reference not set to an instance of an object
+  at hurtPlayers.OnTriggerEnter2D (UnityEngine.Collider2D col) [0x00000] in <filename unknown>:0 
  
-(Filename:  Line: 1260)
+(Filename:  Line: -1)
 
-Joystick disconnected ("Controller (XBOX 360 For Windows)").
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.202987 ms
+
+Unloading 111 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.975048 ms (FindLiveObjects: 0.115038 ms CreateObjectMapping: 0.052601 ms MarkObjects: 0.707765 ms  DeleteObjects: 0.098787 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.475122 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 468.
+Total: 0.365643 ms (FindLiveObjects: 0.029508 ms CreateObjectMapping: 0.018816 ms MarkObjects: 0.303633 ms  DeleteObjects: 0.013257 ms)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
  
-(Filename:  Line: 1260)
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.525157 ms
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.914321 ms (FindLiveObjects: 0.103919 ms CreateObjectMapping: 0.059871 ms MarkObjects: 0.694507 ms  DeleteObjects: 0.054311 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.475549 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 468.
+Total: 0.378900 ms (FindLiveObjects: 0.031218 ms CreateObjectMapping: 0.019244 ms MarkObjects: 0.315180 ms  DeleteObjects: 0.011974 ms)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.475549 ms
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.418672 ms (FindLiveObjects: 0.055167 ms CreateObjectMapping: 0.019244 ms MarkObjects: 0.310903 ms  DeleteObjects: 0.032501 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.710758 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 468.
+Total: 0.328437 ms (FindLiveObjects: 0.030363 ms CreateObjectMapping: 0.013684 ms MarkObjects: 0.273270 ms  DeleteObjects: 0.010691 ms)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?
+ 
+(Filename:  Line: 117)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at hurtPlayers.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at canBeCollected.OnCollisionEnter2D (UnityEngine.Collision2D col) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.326578 ms
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 1.055874 ms (FindLiveObjects: 0.107340 ms CreateObjectMapping: 0.050890 ms MarkObjects: 0.823231 ms  DeleteObjects: 0.072700 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: a358 -> priority: 1 
-  Thread -> id: b734 -> priority: 1 
+  Thread -> id: 4284 -> priority: 1 
+  Thread -> id: 1f14 -> priority: 1 
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
+ 
+(Filename:  Line: 1260)
+
+Joystick disconnected ("Controller (XBOX 360 For Windows)").
+ 
+(Filename:  Line: 1260)
+
