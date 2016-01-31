@@ -1,22 +1,32 @@
 RITUAL COMBAT
 
+BUG-FIX:
+Espartano-desu: Cada lanza del ulti 50dmg, que lluevan de forma random y muy rapido, que no se puedan esquivar tan facilmente ya que hacen poco daño.
+Vibracion al rebotar con la pared.
+Bajar un poco la plataforma te permite volver a subir.
+
 FALTA:
-Implementar que los personajes mueran
-Menú principal
-Pantalla de carga
-Barra de favor
-Personaje Espartano
-Casteo de Ritual + Combinaciones de Teclas
-Ajustar la distancia a la que sale el martillo
+2 Implementar que los personajes mueran 
+2.5 Implementar un ganador
+3 Menú principal
+4 Pantalla de seleccion
+5 Sonidos
+	Barra de favor
+-1 Personaje Espartano
+-1 Casteo de Ritual + Combinaciones de Teclas
+1 Ajustar la distancia a la que sale el martillo
+	Implementacion del bloqueo
+Pulir Knockbacks
+Añadir Efectos Especiales
+Poner texto a la barra de HP
+Implementar objetos que spawnean y recargan favor
 
-
-risk of rain pvp - deathmatch
-skill based -> apuntar
-varios personajes -> cada uno a su dios
-castear el ritual en mitad del combate para efectos extra
-cuando casteas el ritual se cambia el fondo de la pantalla al dios invocado
-OPCIONAL: personaje generico y desbloquear dioses
-ritual: instakill (esquivar o intentar cortarlo)
+NECESITAMOS:
+- Plataformas
+- Fondo de pantalla in game
+- Fondo de pantalla menu
+- Fondo de pantalla seleccion
+- Logotipo del videojuego
 
 Ataque basico, ataque especial, ulti
 
@@ -27,36 +37,18 @@ personajes: un personaje y elige a que bando
 	ULTI: ritual a thor, que caiga un martillo del cielo y aplaste a todos
 	VELOCIDAD --, VIDA ++
 
-2. Griego con lanza (pantheon sin escudo).
-	BASICO: melee, menos attack speed, más rango
-	ESPECIAL: Lanza la lanza y tiene que recogerla como hacha de draven. Mientras tanto puede lanzar puñetazos pero menos daño y menos rango pero mas attack speed. Corre más.
-	ULTI: Ares. Llueven armas del cielo. Hace el mismo daño que si la lanza. Se ve caer para que se pueda esquivar. Las puedes coger como tu habilidad especial para lanzarlas. Duran x tiempo pero si tienes una lanza no se pierde hasta que la lanzas.
-	VELOCIDAD ++, VIDA ==
-
-3. Cultista de cthulhu.
+2. Cultista de cthulhu.
 	BASICO: proyectiles magicos (no mucho daño pero bastante rango) No muy spameable.
 	ESPECIAL: Saca una daga de sacrificio (rango muy corto). Si te acierta se le llena la barra de golpe.
 	ULTI: cthulhu. invoca tentaculos hentai y violan a las lolis. Hacia adelante o a ambos lados?
 	VELOCIDAD ==, VIDA --
 
+3. Griego con lanza (pantheon sin escudo).
+	BASICO: melee, menos attack speed, más rango
+	ESPECIAL: Lanza la lanza y tiene que recogerla como hacha de draven. Mientras tanto puede lanzar puñetazos pero menos daño y menos rango pero mas attack speed. Corre más.
+	ULTI: Ares. Llueven armas del cielo. Hace el mismo daño que si la lanza. Se ve caer para que se pueda esquivar. Las puedes coger como tu habilidad especial para lanzarlas. Duran x tiempo pero si tienes una lanza no se pierde hasta que la lanzas.
+	VELOCIDAD ++, VIDA ==	
+
 	4. poseidon -> ola gigante que stunea (ulti de nami)
 	5. china -> dragon que lance llamarada
 	6. loki -> invoca copias del jugador rollo lb o shaco
-
-una barra DE FAVOR, cuando se llena puedes usar tu ulti (se llena rapido)
-barra de casteo: se llena si hacer combinaciones de teclas y se vacia si te pegan, pero se llena tambien por tiempo
-
-
-OPCIONAL: combinacion de teclas
-objetos que van spawneando y te llenan la barra
-
-MENU PRINCIPAL
-PANTALLA DE SELECCION DE PERSONAJE
-gana el dios, no el jugador
-
-
-
-
-DETALLES A MODIFICAR:
-Vibracion al rebotar con la pared.
-Bajar un poco la plataforma te permite volver a subir.

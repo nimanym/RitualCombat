@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 350.0f;
     public float health;
     public GameObject healthBar;
+    public GameObject ragdoll;
     bool isAlive;
     bool isBlocking;
     int player;
@@ -91,6 +92,18 @@ public class PlayerHealth : MonoBehaviour
         if (myHealth <= 0) myHealth = 0;
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
         
+    }
+
+    public bool checkDead() {
+        return !isAlive;
+    }
+
+    void die() {
+        GameObject rag = Instantiate(ragdoll);
+        rag.transform.position = transform.position;
+        rag.transform.rotation = transform.rotation;
+        rag.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+        Destroy(gameObject);
     }
 
 
