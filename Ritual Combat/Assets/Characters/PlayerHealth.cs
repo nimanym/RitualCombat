@@ -20,18 +20,21 @@ public class PlayerHealth : MonoBehaviour
     }       // Update is called once per frame	
     void FixedUpdate()
     {
+
         if (health <= 0)
         {
             health = 0.0f;
             isAlive = false;
         }
 
+        //El personaje se vuelve rojo cuando recibe daño
         if (damagedTimer > 0.0f)
         {
             damagedTimer -= Time.deltaTime;
             gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, 2*damagedTimer);
         }
 
+        //Rotación de la barra de vida al rotar el personaje 180º
         if (gameObject.transform.rotation.eulerAngles.y > 0)
         {
             healthBar.transform.parent.GetComponent<RectTransform>().localScale = new Vector3(-healthBarSize.x, healthBarSize.y, healthBarSize.z);
@@ -64,13 +67,13 @@ public class PlayerHealth : MonoBehaviour
             health -= dmg;
         }
 
+        //Calcula la vida actual cada vez que recibe daño para actualizar la barra de vida
         float calcHealth = health / maxHealth;
         setHealthBar(calcHealth);
     }
 
+    //Actualiza la barra de vida del personaje
     public void setHealthBar(float myHealth) {
-        //float healthPercentage = health * 100 / maxHealth;
-        //Debug.Log("Vida: "+health+" Porcentaje: "+ healthPercentage);
         if (myHealth <= 0) myHealth = 0;
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
         
