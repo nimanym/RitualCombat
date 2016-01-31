@@ -7,6 +7,7 @@ public class hurtPlayers : MonoBehaviour {
     public GameObject exceptPlayer;
     public bool autoDestruct = false;
     public float giveFavour = 0.0f;
+    public bool knockback = false;
 
     // Use this for initialization
     void Start () {
@@ -34,6 +35,12 @@ public class hurtPlayers : MonoBehaviour {
                     exceptPlayer.GetComponent<PlayerFavour>().addFavour(giveFavour);
                 }
                 col.gameObject.GetComponent<PlayerHealth>().receiveDamage(damage);
+
+                if (knockback)
+                {
+                    col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(damage * 5 *(col.transform.position.x-transform.position.x), 0), ForceMode2D.Impulse);
+                }
+
                 if (autoDestruct)
                 {
                     Destroy(gameObject);

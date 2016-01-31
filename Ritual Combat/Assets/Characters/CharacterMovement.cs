@@ -22,8 +22,6 @@ public class CharacterMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate() {
-
-        //Debug.Log(Camera.main.WorldToScreenPoint(transform.GetComponent<BoxCollider2D>().bounds.min).x);
         
         //Movimiento Lateral
         transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(Input.GetAxis("Horizontal" + player.ToString())*maxSpeed, 0.0f), ForceMode2D.Impulse);
